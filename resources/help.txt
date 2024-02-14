@@ -1,0 +1,41 @@
+//How to get JSON of each individual combat achievement difficulty.
+//Go to wiki page, and then open chrome console
+let rows = document.querySelectorAll("tr")
+
+let x = []
+
+for (let row of rows) {
+    if (row.attributes?.['data-ca-task-id']) {
+        let zy = [ row.attributes?.['data-ca-task-id'].value ];
+        for (let child of row.children) {
+            zy.push(child.innerText)
+        }
+        x.push(zy)
+    }
+}
+
+//Get x (enter in x in chrome console and right copy) 
+
+
+//Processing each JSON into a big list with difficulty category added
+let x = []
+
+var obj = //Enter in JSON strings here
+var s = JSON.stringify(obj)
+let o = JSON.parse(s);
+x.push(o)
+
+let difficulties = ['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster'];
+let i = 0;
+x.forEach(element=> {
+	element.forEach(innerElem=> {
+	innerElem.pop(); //Trim off the completion ratio for now
+	innerElem.push(difficulties[i]);
+	});
+	i++;
+});
+
+let combinedObj = {};
+x.forEach(element=> {
+	combinedObj = { ...combinedObj, ...element };
+});
