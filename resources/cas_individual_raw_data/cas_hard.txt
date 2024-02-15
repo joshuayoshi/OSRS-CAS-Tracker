@@ -1,0 +1,506 @@
+[
+    [
+        "1",
+        "Abyssal Sire",
+        "Abyssal Adept",
+        "Kill the Abyssal Sire 20 times.",
+        "Kill Count",
+        "17.6%"
+    ],
+    [
+        "5",
+        "Abyssal Sire",
+        "Don't Whip Me",
+        "Kill the Abyssal Sire without being hit by any external tentacles.",
+        "Mechanical",
+        "16.3%"
+    ],
+    [
+        "7",
+        "Abyssal Sire",
+        "Don't Stop Moving",
+        "Kill the Abyssal Sire without taking damage from any miasma pools.",
+        "Perfection",
+        "14.8%"
+    ],
+    [
+        "3",
+        "Abyssal Sire",
+        "They Grow Up Too Fast",
+        "Kill the Abyssal Sire without letting any Scion mature.",
+        "Mechanical",
+        "8.4%"
+    ],
+    [
+        "30",
+        "Barrows",
+        "Faithless Crypt Run",
+        "Kill all six Barrows Brothers and loot the Barrows chest without ever having more than 0 prayer points.",
+        "Restriction",
+        "19.4%"
+    ],
+    [
+        "29",
+        "Barrows",
+        "Just Like That",
+        "Kill Karil using only damage dealt by special attacks.",
+        "Restriction",
+        "23.8%"
+    ],
+    [
+        "42",
+        "Callisto",
+        "Callisto Adept",
+        "Kill Callisto 10 times.",
+        "Kill Count",
+        "18.7%"
+    ],
+    [
+        "57",
+        "Chaos Elemental",
+        "Chaos Elemental Adept",
+        "Kill the Chaos Elemental 10 times.",
+        "Kill Count",
+        "16.2%"
+    ],
+    [
+        "60",
+        "Chaos Elemental",
+        "The Flincher",
+        "Kill the Chaos Elemental without taking any damage from it's[sic] attacks.",
+        "Perfection",
+        "10.9%"
+    ],
+    [
+        "59",
+        "Chaos Elemental",
+        "Hoarder",
+        "Kill the Chaos Elemental without it unequipping any of your items.",
+        "Mechanical",
+        "20.3%"
+    ],
+    [
+        "64",
+        "Chaos Fanatic",
+        "Praying to the Gods",
+        "Kill the Chaos Fanatic 10 times without drinking any potion which restores prayer or leaving the Wilderness.",
+        "Restriction",
+        "10.3%"
+    ],
+    [
+        "62",
+        "Chaos Fanatic",
+        "Chaos Fanatic Adept",
+        "Kill the Chaos Fanatic 25 times.",
+        "Kill Count",
+        "15.2%"
+    ],
+    [
+        "213",
+        "Commander Zilyana",
+        "Commander Showdown",
+        "Finish off Commander Zilyana while all of her bodyguards are dead.",
+        "Mechanical",
+        "7.5%"
+    ],
+    [
+        "211",
+        "Commander Zilyana",
+        "Commander Zilyana Adept",
+        "Kill Commander Zilyana 50 times.",
+        "Kill Count",
+        "13.3%"
+    ],
+    [
+        "71",
+        "Crazy Archaeologist",
+        "Crazy Archaeologist Adept",
+        "Kill the Crazy Archaeologist 25 times.",
+        "Kill Count",
+        "22.5%"
+    ],
+    [
+        "198",
+        "Dagannoth Prime",
+        "Dagannoth Prime Adept",
+        "Kill Dagannoth Prime 25 times.",
+        "Kill Count",
+        "23.6%"
+    ],
+    [
+        "202",
+        "Dagannoth Rex",
+        "Dagannoth Rex Adept",
+        "Kill Dagannoth Rex 25 times.",
+        "Kill Count",
+        "33.8%"
+    ],
+    [
+        "234",
+        "Dagannoth Supreme",
+        "Dagannoth Supreme Adept",
+        "Kill Dagannoth Supreme 25 times.",
+        "Kill Count",
+        "23.6%"
+    ],
+    [
+        "16",
+        "General Graardor",
+        "General Graardor Adept",
+        "Kill General Graardor 50 times.",
+        "Kill Count",
+        "22%"
+    ],
+    [
+        "20",
+        "General Graardor",
+        "General Showdown",
+        "Finish off General Graardor whilst all of his bodyguards are dead.",
+        "Mechanical",
+        "7.4%"
+    ],
+    [
+        "18",
+        "General Graardor",
+        "Ourg Freezer",
+        "Kill General Graardor whilst he is immobilized.",
+        "Mechanical",
+        "9%"
+    ],
+    [
+        "179",
+        "Giant Mole",
+        "Why Are You Running?",
+        "Kill the Giant Mole without her burrowing more than 2 times.",
+        "Mechanical",
+        "31.4%"
+    ],
+    [
+        "181",
+        "Giant Mole",
+        "Whack-a-Mole",
+        "Kill the Giant Mole within 10 seconds of her resurfacing.",
+        "Mechanical",
+        "25.5%"
+    ],
+    [
+        "88",
+        "Grotesque Guardians",
+        "Static Awareness",
+        "Kill the Grotesque Guardians without being hit by any lightning attacks.",
+        "Mechanical",
+        "20.2%"
+    ],
+    [
+        "85",
+        "Grotesque Guardians",
+        "Prison Break",
+        "Kill the Grotesque Guardians without taking damage from Dusk's prison attack.",
+        "Mechanical",
+        "20.7%"
+    ],
+    [
+        "84",
+        "Grotesque Guardians",
+        "Don't Look at the Eclipse",
+        "Kill the Grotesque Guardians without taking damage from Dusk's blinding attack.",
+        "Mechanical",
+        "20.2%"
+    ],
+    [
+        "86",
+        "Grotesque Guardians",
+        "Granite Footwork",
+        "Kill the Grotesque Guardians without taking damage from Dawn's rockfall attack.",
+        "Mechanical",
+        "20.5%"
+    ],
+    [
+        "87",
+        "Grotesque Guardians",
+        "Heal No More",
+        "Kill the Grotesque Guardians without letting Dawn receive any healing from her orbs.",
+        "Mechanical",
+        "20.7%"
+    ],
+    [
+        "82",
+        "Grotesque Guardians",
+        "Grotesque Guardians Adept",
+        "Kill the Grotesque Guardians 25 times.",
+        "Kill Count",
+        "19.2%"
+    ],
+    [
+        "123",
+        "Hespori",
+        "Hespori Adept",
+        "Kill Hespori 5 times.",
+        "Kill Count",
+        "45.4%"
+    ],
+    [
+        "124",
+        "Hespori",
+        "Hesporisn't",
+        "Finish off Hespori with a special attack.",
+        "Mechanical",
+        "27.3%"
+    ],
+    [
+        "125",
+        "Hespori",
+        "Weed Whacker",
+        "Kill all of Hesporis flowers within 5 seconds.",
+        "Mechanical",
+        "35.1%"
+    ],
+    [
+        "335",
+        "K'ril Tsutsaroth",
+        "Demonic Showdown",
+        "Finish off K'ril Tsutsaroth whilst all of his bodyguards are dead.",
+        "Mechanical",
+        "5.9%"
+    ],
+    [
+        "339",
+        "K'ril Tsutsaroth",
+        "Demonbane Weaponry II",
+        "Finish off K'ril Tsutsaroth with a demonbane weapon.",
+        "Restriction",
+        "23.4%"
+    ],
+    [
+        "332",
+        "K'ril Tsutsaroth",
+        "K'ril Tsutsaroth Adept",
+        "Kill K'ril Tsutsaroth 50 times.",
+        "Kill Count",
+        "13.7%"
+    ],
+    [
+        "334",
+        "K'ril Tsutsaroth",
+        "Yarr No More",
+        "Receive kill-credit for K'ril Tsutsaroth without him using his special attack.",
+        "Mechanical",
+        "24.3%"
+    ],
+    [
+        "157",
+        "Kalphite Queen",
+        "Kalphite Queen Adept",
+        "Kill the Kalphite Queen 25 times.",
+        "Kill Count",
+        "16.8%"
+    ],
+    [
+        "159",
+        "Kalphite Queen",
+        "Chitin Penetrator",
+        "Kill the Kalphite Queen while her defence was last lowered by you.",
+        "Mechanical",
+        "19.9%"
+    ],
+    [
+        "167",
+        "King Black Dragon",
+        "Who Is the King Now?",
+        "Kill The King Black Dragon 10 times in a private instance without leaving the instance.",
+        "Stamina",
+        "11.4%"
+    ],
+    [
+        "169",
+        "Kraken",
+        "Unnecessary Optimization",
+        "Kill the Kraken after killing all four tentacles.",
+        "Mechanical",
+        "17.4%"
+    ],
+    [
+        "170",
+        "Kraken",
+        "Krakan't Hurt Me",
+        "Kill the Kraken 25 times in a private instance without leaving the room.",
+        "Stamina",
+        "21.9%"
+    ],
+    [
+        "168",
+        "Kraken",
+        "Kraken Adept",
+        "Kill the Kraken 20 times.",
+        "Kill Count",
+        "30.5%"
+    ],
+    [
+        "12",
+        "Kree'arra",
+        "Airborne Showdown",
+        "Finish off Kree'arra whilst all of his bodyguards are dead.",
+        "Mechanical",
+        "5.5%"
+    ],
+    [
+        "9",
+        "Kree'arra",
+        "Kree'arra Adept",
+        "Kill Kree'arra 50 times.",
+        "Kill Count",
+        "10.3%"
+    ],
+    [
+        "478",
+        "Phantom Muspah",
+        "Phantom Muspah Adept",
+        "Kill the Phantom Muspah.",
+        "Kill Count",
+        "17.2%"
+    ],
+    [
+        "209",
+        "Sarachnis",
+        "Inspect Repellent",
+        "Kill Sarachnis without her dealing damage to anyone.",
+        "Perfection",
+        "23.9%"
+    ],
+    [
+        "208",
+        "Sarachnis",
+        "Ready to Pounce",
+        "Kill Sarachnis without her using her range attack twice in a row.",
+        "Mechanical",
+        "18.7%"
+    ],
+    [
+        "221",
+        "Scorpia",
+        "Guardians No More",
+        "Kill Scorpia without killing her guardians.",
+        "Restriction",
+        "17.5%"
+    ],
+    [
+        "220",
+        "Scorpia",
+        "I Can't Reach That",
+        "Kill Scorpia without taking any damage from her.",
+        "Perfection",
+        "13.3%"
+    ],
+    [
+        "218",
+        "Scorpia",
+        "Scorpia Adept",
+        "Kill Scorpia 10 times.",
+        "Kill Count",
+        "14.1%"
+    ],
+    [
+        "45",
+        "Skotizo",
+        "Skotizo Adept",
+        "Kill Skotizo 5 times.",
+        "Kill Count",
+        "34.1%"
+    ],
+    [
+        "355",
+        "Tempoross",
+        "Dress Like You Mean It",
+        "Subdue Tempoross while wearing any variation of the angler outfit.",
+        "Restriction",
+        "33.9%"
+    ],
+    [
+        "358",
+        "Tempoross",
+        "Why Cook?",
+        "Subdue Tempoross, getting rewarded with 10 reward permits from a single Tempoross fight.",
+        "Mechanical",
+        "15.7%"
+    ],
+    [
+        "183",
+        "The Nightmare",
+        "Nightmare Adept",
+        "Kill The Nightmare once.",
+        "Kill Count",
+        "12.7%"
+    ],
+    [
+        "397",
+        "Theatre of Blood: Entry Mode",
+        "Theatre of Blood: SM Adept",
+        "Complete the Theatre of Blood: Entry Mode 1 time.",
+        "Kill Count",
+        "30.1%"
+    ],
+    [
+        "465",
+        "Tombs of Amascut: Entry Mode",
+        "Confident Raider",
+        "Complete a Tombs of Amascut raid at level 100 or above.",
+        "Restriction",
+        "27.3%"
+    ],
+    [
+        "461",
+        "Tombs of Amascut: Entry Mode",
+        "Novice Tomb Explorer",
+        "Complete the Tombs of Amascut in Entry mode (or above) once.",
+        "Kill Count",
+        "31.2%"
+    ],
+    [
+        "464",
+        "Tombs of Amascut: Entry Mode",
+        "Movin' on up",
+        "Complete a Tombs of Amascut raid at level 50 or above.",
+        "Restriction",
+        "29.1%"
+    ],
+    [
+        "462",
+        "Tombs of Amascut: Entry Mode",
+        "Novice Tomb Looter",
+        "Complete the Tombs of Amascut in Entry mode (or above) 25 times.",
+        "Kill Count",
+        "16.9%"
+    ],
+    [
+        "264",
+        "Venenatis",
+        "Venenatis Adept",
+        "Kill Venenatis 10 times.",
+        "Kill Count",
+        "17.6%"
+    ],
+    [
+        "266",
+        "Vet'ion",
+        "Vet'ion Adept",
+        "Kill Vet'ion 10 times.",
+        "Kill Count",
+        "20.3%"
+    ],
+    [
+        "286",
+        "Wintertodt",
+        "Why Fletch?",
+        "Subdue the Wintertodt after earning 3000 or more points.",
+        "Stamina",
+        "22.1%"
+    ],
+    [
+        "224",
+        "Zulrah",
+        "Zulrah Adept",
+        "Kill Zulrah 25 times.",
+        "Kill Count",
+        "27.8%"
+    ]
+]

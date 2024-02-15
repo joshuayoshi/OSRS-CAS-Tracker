@@ -1,0 +1,6 @@
+Get player wikisync data from url:
+https://sync.runescape.wiki/runelite/player/playername/STANDARD
+replace playername with player name, like:
+https://sync.runescape.wiki/runelite/player/hitachi%20mako/STANDARD
+
+check ca ID against it's name in the cas_list.json file and display with filter options
