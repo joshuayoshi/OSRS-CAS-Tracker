@@ -1,8 +1,9 @@
 import React, { useState, ChangeEvent } from 'react';
 import '../App.css';
+import casListJson from '../data/cas_list.json';
 import stateStore from '../store';
 
-export function TextInput( {id, onKeyDown}) {
+    export function TextInput( {id, onKeyDown}) {
     const {changeRSN} = stateStore(); 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         changeRSN(event.target.value);
@@ -17,10 +18,9 @@ export function TextInput( {id, onKeyDown}) {
       );
   }
 
-  export function CasTable( props: any ) {
+    export function CasTable() {
     const {completedCasArray} = stateStore(); 
-    let {casListJson} = props;
-    casListJson = casListJson.map( (x :any) => { 
+    let casList = casListJson.map( (x :any) => { 
         return{
             id: x[0],
             boss: x[1],
@@ -45,7 +45,7 @@ export function TextInput( {id, onKeyDown}) {
                 </tr>
                 </thead>
                 <tbody>
-                {casListJson.map((val:any, key:any) => {
+                {casList.map((val:any, key:any) => {
                     let completed = (completedCasArray.includes(Number(val.id)));
                     return (
                         <tr key={key} className={(completed) ? 'completed' : 'not-completed'}>
@@ -63,3 +63,7 @@ export function TextInput( {id, onKeyDown}) {
         </div>
     );
   }
+
+export function CasFilters(){
+
+}

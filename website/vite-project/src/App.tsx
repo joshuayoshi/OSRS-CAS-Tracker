@@ -1,6 +1,5 @@
 import { SetStateAction, useEffect, useState } from 'react'
 import './App.css'
-import casListJson from './data/cas_list.json';
 import { TextInput, CasTable } from './components/components.tsx'
 import { fetchData } from './GetSyncData.tsx'
 import stateStore from './store';
@@ -34,7 +33,7 @@ function App() {
       <br />
       {/* {DisplayJson()} */}
 
-      <CasTable casListJson={casListJson} />
+      <CasTable/>
     </>
   )
 }
