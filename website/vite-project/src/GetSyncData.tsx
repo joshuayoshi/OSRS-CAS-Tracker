@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-// let rsn = 'hitachi mako'; //uhh okay
-// let url = `https://sync.runescape.wiki/runelite/player/${rsn}/STANDARD`;
-
 async function fetchSyncJson(url: string){
     try{
     const response = await fetch(url);
@@ -23,7 +20,7 @@ async function fetchData(rsn: string) {
 }
 
 export function DisplayData(props: any){
-    const rsn = props.rsn;
+    const rsn = props.inputText;
     const [data, setData] = useState({combat_achievements:[]});
     useEffect(()=> {
         callData();
@@ -40,20 +37,13 @@ export function DisplayData(props: any){
         }
     }
 
-    // const listItems = data.combat_achievements.map( caID =>
-    //     <div>
-    //         <li>
-    //             {caID}
-    //         </li>
-    //     </div>
-    // );
-
     const listItems = data.combat_achievements.join(", ")
 
     return (
-        <div>
-        <p>Getting WikiSync data of {rsn}</p>
-        {listItems}
-        </div>
+        // <div>
+        // {/* <p>Getting WikiSync data of {rsn}</p> */}
+        // {listItems}
+        // </div>
+        data.combat_achievements
     )
 }
