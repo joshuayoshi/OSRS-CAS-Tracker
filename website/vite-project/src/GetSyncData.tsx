@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import stateStore from './store';
 
 async function fetchSyncJson(url: string){
     try{
@@ -11,39 +12,14 @@ async function fetchSyncJson(url: string){
 }
 }
 
-async function fetchData(rsn: string) {
+export async function fetchData(rsn: any, setCompletedCasArray: any) {
+    // Error: Invalid hook call. Hooks can only be called inside of the body of a function component. ):
+    // const {setCompletedCasArray, rsn} = stateStore();
+
     let url = `https://sync.runescape.wiki/runelite/player/${rsn}/STANDARD`;
     const jsonData = await fetchSyncJson(url);
     if (jsonData) console.log('JSON data: ', jsonData);
     else console.error("Failed to fetch json data");
-    return jsonData;
-}
 
-export function DisplayData(props: any){
-    const rsn = props.inputText;
-    const [data, setData] = useState({combat_achievements:[]});
-    useEffect(()=> {
-        callData();
-    }, [props.clickCount]);
-
-    async function callData(){
-        try{
-            const d = await fetchData(rsn);
-            if(d){
-                setData(d);
-            }
-        } catch {
-            console.log("error with callData");
-        }
-    }
-
-    const listItems = data.combat_achievements.join(", ")
-
-    return (
-        // <div>
-        // {/* <p>Getting WikiSync data of {rsn}</p> */}
-        // {listItems}
-        // </div>
-        data.combat_achievements
-    )
+    setCompletedCasArray(jsonData.combat_achievements);
 }

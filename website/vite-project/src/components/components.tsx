@@ -1,9 +1,11 @@
 import React, { useState, ChangeEvent } from 'react';
 import '../App.css';
+import stateStore from '../store';
 
-export function TextInput( {id, onInputChange, onKeyDown}) {
+export function TextInput( {id, onKeyDown}) {
+    const {changeRSN} = stateStore(); 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        onInputChange(event.target.value);
+        changeRSN(event.target.value);
       };
     
       return (
@@ -16,7 +18,8 @@ export function TextInput( {id, onInputChange, onKeyDown}) {
   }
 
   export function CasTable( props: any ) {
-    let {casListJson, completedCasArray} = props;
+    const {completedCasArray} = stateStore(); 
+    let {casListJson} = props;
     casListJson = casListJson.map( (x :any) => { 
         return{
             id: x[0],
