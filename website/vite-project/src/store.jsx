@@ -24,7 +24,7 @@ const stateStore = create((set, get) => ({
   },
   //rsnButtonClicked functions
   setRsnSearchButtonClicked: (rsnSearchButtonClicked) => {
-    set({ rsnSearchButtonClicked })
+    set({rsnSearchButtonClicked})
   }
 
 
