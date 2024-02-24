@@ -1,0 +1,24 @@
+.PrettyCasTrackerPage {
+    margin: 32px;
+    background: var(--mantine-color-dark-6);
+    color: #ffffff;
+    font-family: var(--mantine-font-family);
+    border-radius: var(--mantine-radius-md);
+}
+
+.PrettyCasTable{
+
+}
+
+
+tr.completed td{
+    background: #2e5e05; //Green stolen from the wiki
+  }
+  
+  tr.not-completed{
+    /*Stay default color*/
+}
+
+//margin padding
+//flexboxes, gap
+//grids
