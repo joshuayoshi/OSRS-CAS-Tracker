@@ -1,3 +1,5 @@
+@layer base, mantine, components;
+
 .PrettyCasTrackerPage {
     margin: 32px;
     background: var(--mantine-color-dark-6);
@@ -6,19 +8,18 @@
     border-radius: var(--mantine-radius-md);
 }
 
-.PrettyCasTable{
-
+/* Target table rows within 'mantine-Table' that have the class 'completed' */
+tr.completed {
+  /* Apply background color to completed rows */
+  background: #2e5e05;
 }
-
-
-tr.completed td{
-    background: #2e5e05; //Green stolen from the wiki
-  }
   
   tr.not-completed{
     /*Stay default color*/
 }
 
-//margin padding
-//flexboxes, gap
-//grids
+/*
+margin padding
+flexboxes, gap
+grids
+*/

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { TextInput, CasTable, MantineCasTable } from '../components/components'
+import { UsernameInput, MantineCasTable, FilterQueryInput  } from '../components/components'
 import { fetchData } from '../GetSyncData'
 import stateStore from '../store.jsx'
 import '../testMantine.css'
@@ -23,9 +23,10 @@ const PrettyTrackerPage = () => {
     <div className='PrettyCasTrackerPage'>
     <>
       <h2>CAS tracker</h2>
-      <TextInput id="" onKeyDown={({ key }) => (key === 'Enter') ? handleButtonClick() : null}
+      <UsernameInput id="" onKeyDown={({ key }) => (key === 'Enter') ? handleButtonClick() : null}
       /> &nbsp;&nbsp;
       <button onClick={handleButtonClick}>I'm a bottom!</button>
+      <FilterQueryInput />
       {rsnSearchButtonClicked && <p id="username-display-text"> Getting WikiSync data of {rsn}</p>}
 
       {/*Filters here*/}

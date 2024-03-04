@@ -8,6 +8,7 @@ const stateStore = create((set, get) => ({
   completedCasArray: [],
   rsnSearchButtonClicked: false,
   rsnUpdateCount: 0,
+  filterQuery: '',
   
   //rsn functions
   changeRSN: (rsn) => {
@@ -25,8 +26,11 @@ const stateStore = create((set, get) => ({
   //rsnButtonClicked functions
   setRsnSearchButtonClicked: (rsnSearchButtonClicked) => {
     set({rsnSearchButtonClicked})
+  },
+  //filterQuery functions
+  changeFilterQuery: (filterQuery) => {
+    set({ filterQuery }) 
   }
-
 
 }))
 

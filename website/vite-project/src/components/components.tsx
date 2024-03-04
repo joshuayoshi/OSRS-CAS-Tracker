@@ -3,9 +3,9 @@ import React, { useState, ChangeEvent } from 'react';
 import '../testMantine.css';
 import casListJson from '../data/cas_list.json';
 import stateStore from '../store';
-import { Table } from '@mantine/core';
+import { Table, TextInput } from '@mantine/core';
 
-export function TextInput({ id, onKeyDown }) {
+export function UsernameInput( {onKeyDown} ) {
     const { changeRSN } = stateStore();
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         changeRSN(event.target.value);
@@ -17,6 +17,22 @@ export function TextInput({ id, onKeyDown }) {
             onChange={handleChange}
             onKeyDown={onKeyDown}
         />
+    );
+}
+
+export function FilterQueryInput( {onKeyDown} ) {
+    const { changeFilterQuery } = stateStore();
+
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        changeFilterQuery(event.target.value);
+    };
+
+    return (
+      <TextInput 
+      placeholder="Filter CAs..."
+      onChange={handleChange}
+      onKeyDown={onKeyDown}
+      />        
     );
 }
 
@@ -66,7 +82,8 @@ export function CasTable() {
 }
 
 export function MantineCasTable () {
-    const { completedCasArray } = stateStore();
+    const { completedCasArray, filterQuery } = stateStore();
+
     let casList = casListJson.map((x: any) => {
         return {
             id: x[0],
@@ -77,8 +94,21 @@ export function MantineCasTable () {
             difficulty: x[5]
         }
     });
+
+    // Filter casList based on filterQuery before mapping to rows
+    const filteredCasList = casList.filter((element) => {
+        // return element.name.toLowerCase().includes(filterQuery.toLowerCase()) ||
+        //        element.boss.toLowerCase().includes(filterQuery.toLowerCase());
+
+        const elementValues = Object.values(element);
+        return elementValues.some(value =>
+            value.toString().toLowerCase().includes(filterQuery.toLowerCase())
+        );
+
+    });
+
     //Rows
-    const rows = casList.map((element) => {
+    const rows = filteredCasList.map((element) => {
         let completed = (completedCasArray.includes(Number(element.id)));
         return (
         <Table.Tr key={element.id} className={(completed) ? 'completed' : 'not-completed'}>
@@ -96,7 +126,7 @@ export function MantineCasTable () {
             <Table.Tr>
               <Table.Th>Boss</Table.Th>
               <Table.Th>CA Name</Table.Th>
-              <Table.Th>Descriptionn</Table.Th>
+              <Table.Th>Description</Table.Th>
               <Table.Th>Type</Table.Th>
               <Table.Th>Difficulty</Table.Th>
             </Table.Tr>
@@ -111,4 +141,8 @@ export function CasFilters() {
     //Show not-completed
     //Dropdown menu to show by difficulty
     //Search filter to filter by keyword
+}
+
+export function CasSearchBar() {
+    //Search bar to filter to filter by keyword
 }
