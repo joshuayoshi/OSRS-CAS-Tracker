@@ -12,13 +12,6 @@ import icon_elite from "../assets/Combat_Achievements_-_elite_tier_icon_(small).
 import icon_master from "../assets/Combat_Achievements_-_master_tier_icon_(small).webp";
 import icon_grandmaster from "../assets/Combat_Achievements_-_grandmaster_tier_icon_(small).webp";
 
-// import icon_easy from "../assets/Combat_Achievements_-_easy_tier_icon_(small).png";
-// import icon_medium from "../assets/Combat_Achievements_-_medium_tier_icon_(small).png";
-// import icon_hard from "../assets/Combat_Achievements_-_hard_tier_icon_(small).png";
-// import icon_elite from "../assets/Combat_Achievements_-_elite_tier_icon_(small).png";
-// import icon_master from "../assets/Combat_Achievements_-_master_tier_icon_(small).png";
-// import icon_grandmaster from "../assets/Combat_Achievements_-_grandmaster_tier_icon_(small).png";
-
 export function UsernameInput( {onKeyDown} ) {
     const { changeRSN } = stateStore();
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -77,7 +70,7 @@ export function DifficultyFilterOptions() {
 
   const renderMultiSelectOption: MultiSelectProps['renderOption'] = ({ option }) => (
     <Group gap="sm">
-      <Avatar src={difficultyOptionsData[option.value].image} size={36} radius="xl" />
+      <Avatar src={difficultyOptionsData[option.value].image} size={16} radius="xl" />
       {/* <Avatar src={icon_easy} size={36} radius="xl" /> */}
       <div>
         <Text size="sm">{option.value}</Text>
