@@ -5,7 +5,7 @@ function Home() {
     <>
       <h1>capoo</h1>
       <br /><br />
-      <Link href="/PrettyCasTracker">Go to CasTracker</Link>
+      <Link href="/CasTracker">Go to CasTracker</Link>
     </>
   );
 }

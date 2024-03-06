@@ -4,7 +4,7 @@ import { fetchData } from '../GetSyncData'
 import stateStore from '../store.jsx'
 import '../testMantine.css'
 
-const PrettyTrackerPage = () => {
+const TrackerPage = () => {
   //stateStore
   const {rsn, setRsnSearchButtonClicked, rsnSearchButtonClicked, setCompletedCasArray,
      incrementRsnUpdateCount, rsnUpdateCount, completedCasArray, lastSearchedForRSNThatSucceeded, changeLastSearchedForRSNThatSucceeded} = stateStore();
@@ -22,7 +22,7 @@ const PrettyTrackerPage = () => {
   }, [rsnUpdateCount] ); //Everything in these brackets is what useEffect checks to know when to recall
 
   return (
-    <div className='PrettyCasTrackerPage'>
+    <div className='CasTrackerPage'>
     <>
       <h2>CAS tracker</h2>
       <UsernameInput id="" onKeyDown={({ key }) => (key === 'Enter') ? handleButtonClick() : null}
@@ -48,4 +48,4 @@ const PrettyTrackerPage = () => {
   )
 }
 
-export {PrettyTrackerPage};
+export {TrackerPage};

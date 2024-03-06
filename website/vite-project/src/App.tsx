@@ -1,6 +1,6 @@
 import { Link, Route } from "wouter";
 import './App.css'
-import {PrettyTrackerPage} from './pages/PrettyCasTrackerPage.tsx'
+import {TrackerPage} from './pages/CasTrackerPage.tsx'
 import HomePage from './pages/HomePage.tsx'
 // import '@mantine/core/styles.css';
 import '@mantine/core/styles.layer.css';
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
       <Route path="/" component={HomePage} />
       </div>
-      <Route path="/PrettyCasTracker" component={PrettyTrackerPage} />
+      <Route path="/CasTracker" component={TrackerPage} />
     </>
   );
 }
