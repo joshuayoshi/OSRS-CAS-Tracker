@@ -7,8 +7,10 @@ import '../testMantine.css'
 const PrettyTrackerPage = () => {
   //stateStore
   const {rsn, setRsnSearchButtonClicked, rsnSearchButtonClicked, setCompletedCasArray,
-     incrementRsnUpdateCount, rsnUpdateCount} = stateStore();
+     incrementRsnUpdateCount, rsnUpdateCount, completedCasArray, lastSearchedForRSNThatSucceeded, changeLastSearchedForRSNThatSucceeded} = stateStore();
   
+  let completedCasCount = completedCasArray.length;
+
   const handleButtonClick = () => {
     setRsnSearchButtonClicked(true);
     incrementRsnUpdateCount();
@@ -16,7 +18,7 @@ const PrettyTrackerPage = () => {
   
   //useEffect should prevent it from infinitely reloading
   useEffect( () => {
-    if(rsn != '') fetchData(rsn, setCompletedCasArray);
+    if(rsn != '') fetchData(rsn, setCompletedCasArray, changeLastSearchedForRSNThatSucceeded);
   }, [rsnUpdateCount] ); //Everything in these brackets is what useEffect checks to know when to recall
 
   return (
@@ -25,11 +27,12 @@ const PrettyTrackerPage = () => {
       <h2>CAS tracker</h2>
       <UsernameInput id="" onKeyDown={({ key }) => (key === 'Enter') ? handleButtonClick() : null}
       /> &nbsp;&nbsp;
-      <button onClick={handleButtonClick}>I'm a bottom!</button>
+      <button onClick={handleButtonClick}>Search</button>
       <FilterQueryInput />
       <DifficultyFilterOptions />
       <CheckboxFilters />
-      {rsnSearchButtonClicked && <p id="username-display-text"> Getting WikiSync data of {rsn}</p>}
+      {rsnSearchButtonClicked && <p id="username-display-text"> Getting WikiSync data of {lastSearchedForRSNThatSucceeded}</p>}
+      <p>Completed: {completedCasCount} / 526</p>
 
       {/*Filters here*/}
       

@@ -12,14 +12,18 @@ async function fetchSyncJson(url: string){
 }
 }
 
-export async function fetchData(rsn: any, setCompletedCasArray: any) {
-    // Error: Invalid hook call. Hooks can only be called inside of the body of a function component. ):
-    // const {setCompletedCasArray, rsn} = stateStore();
-
+export async function fetchData(rsn: any, setCompletedCasArray: any,  changeLastSearchedForRSNThatSucceeded: any) {
     let url = `https://sync.runescape.wiki/runelite/player/${rsn}/STANDARD`;
     const jsonData = await fetchSyncJson(url);
-    if (jsonData) console.log('JSON data: ', jsonData);
-    else console.error("Failed to fetch json data");
-
+    if (jsonData){
+        //Succeeded
+        console.log('JSON data: ', jsonData);
+        changeLastSearchedForRSNThatSucceeded(rsn);
+    } 
+    else{
+        //Failed
+        console.error("Failed to fetch json data");
+    }
     setCompletedCasArray(jsonData.combat_achievements);
 }
+

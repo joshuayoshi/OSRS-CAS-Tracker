@@ -12,6 +12,7 @@ const stateStore = create((set, get) => ({
   difficultyFilterArray: [],
   completedCheckbox: true,
   notCompletedCheckbox: true,
+  lastSearchedForRSNThatSucceeded: '',
   
   //rsn functions
   changeRSN: (rsn) => {
@@ -45,7 +46,11 @@ const stateStore = create((set, get) => ({
   changeNotCompletedCheckbox: (notCompletedCheckbox) => {
     set({notCompletedCheckbox})
   },
-
+  //LastSearchedForRSNThatSucceeded functions
+  //Sets lastSearchedForRSNThatSucceeded to rsn when called
+  changeLastSearchedForRSNThatSucceeded: (rsn) => {
+    set({lastSearchedForRSNThatSucceeded: rsn})
+  },
 
 }))
 
