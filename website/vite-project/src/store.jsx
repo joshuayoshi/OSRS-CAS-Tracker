@@ -9,6 +9,9 @@ const stateStore = create((set, get) => ({
   rsnSearchButtonClicked: false,
   rsnUpdateCount: 0,
   filterQuery: '',
+  difficultyFilterArray: [],
+  completedCheckbox: true,
+  notCompletedCheckbox: true,
   
   //rsn functions
   changeRSN: (rsn) => {
@@ -30,7 +33,19 @@ const stateStore = create((set, get) => ({
   //filterQuery functions
   changeFilterQuery: (filterQuery) => {
     set({ filterQuery }) 
-  }
+  },
+  //filter selection functions
+  changedifficultyFilterArray: (difficultyFilterArray) => {
+    set({difficultyFilterArray})
+  },
+  //Checkbox filter options
+  changeCompletedCheckbox: (completedCheckbox) => {
+    set({completedCheckbox})
+  },
+  changeNotCompletedCheckbox: (notCompletedCheckbox) => {
+    set({notCompletedCheckbox})
+  },
+
 
 }))
 

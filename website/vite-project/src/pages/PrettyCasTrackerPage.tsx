@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { UsernameInput, MantineCasTable, FilterQueryInput  } from '../components/components'
+import { UsernameInput, MantineCasTable, FilterQueryInput, DifficultyFilterOptions, CheckboxFilters } from '../components/components'
 import { fetchData } from '../GetSyncData'
 import stateStore from '../store.jsx'
 import '../testMantine.css'
@@ -27,6 +27,8 @@ const PrettyTrackerPage = () => {
       /> &nbsp;&nbsp;
       <button onClick={handleButtonClick}>I'm a bottom!</button>
       <FilterQueryInput />
+      <DifficultyFilterOptions />
+      <CheckboxFilters />
       {rsnSearchButtonClicked && <p id="username-display-text"> Getting WikiSync data of {rsn}</p>}
 
       {/*Filters here*/}

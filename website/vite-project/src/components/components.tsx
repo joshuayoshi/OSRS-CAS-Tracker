@@ -3,7 +3,21 @@ import React, { useState, ChangeEvent } from 'react';
 import '../testMantine.css';
 import casListJson from '../data/cas_list.json';
 import stateStore from '../store';
-import { Table, TextInput } from '@mantine/core';
+import { Table, TextInput, MultiSelect, MultiSelectProps, Avatar, Group, Text, Checkbox  } from '@mantine/core';
+
+import icon_easy from "../assets/Combat_Achievements_-_easy_tier_icon_(small).webp";
+import icon_medium from "../assets/Combat_Achievements_-_medium_tier_icon_(small).webp";
+import icon_hard from "../assets/Combat_Achievements_-_hard_tier_icon_(small).webp";
+import icon_elite from "../assets/Combat_Achievements_-_elite_tier_icon_(small).webp";
+import icon_master from "../assets/Combat_Achievements_-_master_tier_icon_(small).webp";
+import icon_grandmaster from "../assets/Combat_Achievements_-_grandmaster_tier_icon_(small).webp";
+
+// import icon_easy from "../assets/Combat_Achievements_-_easy_tier_icon_(small).png";
+// import icon_medium from "../assets/Combat_Achievements_-_medium_tier_icon_(small).png";
+// import icon_hard from "../assets/Combat_Achievements_-_hard_tier_icon_(small).png";
+// import icon_elite from "../assets/Combat_Achievements_-_elite_tier_icon_(small).png";
+// import icon_master from "../assets/Combat_Achievements_-_master_tier_icon_(small).png";
+// import icon_grandmaster from "../assets/Combat_Achievements_-_grandmaster_tier_icon_(small).png";
 
 export function UsernameInput( {onKeyDown} ) {
     const { changeRSN } = stateStore();
@@ -35,6 +49,61 @@ export function FilterQueryInput( {onKeyDown} ) {
       />        
     );
 }
+
+
+export function DifficultyFilterOptions() {
+  const { changedifficultyFilterArray } = stateStore();
+
+  const difficultyOptionsData: Record<string, { image: string }> = {
+    'Easy': {
+      image: icon_easy,
+    },
+    'Medium': {
+      image: icon_medium,
+    },
+    'Hard': {
+      image: icon_hard,
+    },
+    'Elite': {
+      image: icon_elite,
+    },
+    'Master': {
+      image: icon_master,
+    },
+    'Grandmaster': {
+      image: icon_grandmaster,
+    },
+  }
+
+  const renderMultiSelectOption: MultiSelectProps['renderOption'] = ({ option }) => (
+    <Group gap="sm">
+      <Avatar src={difficultyOptionsData[option.value].image} size={36} radius="xl" />
+      {/* <Avatar src={icon_easy} size={36} radius="xl" /> */}
+      <div>
+        <Text size="sm">{option.value}</Text>
+      </div>
+    </Group>
+  );
+
+  return (
+    <div>
+    {/* <img src={icon_easy} />
+    <img src={icon_medium} />
+    <img src={icon_hard} />
+    <img src={icon_elite} />
+    <img src={icon_master} />
+    <img src={icon_grandmaster} /> */}
+    <MultiSelect
+      data={['Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster']}
+      renderOption={renderMultiSelectOption}
+      //   label="Select difficulties"
+      placeholder="Select difficulties to display"
+      onChange={changedifficultyFilterArray} //Passes the 'value' property to the stateStore
+      />
+    </div>
+  );
+}
+
 
 export function CasTable() {
     const { completedCasArray } = stateStore();
@@ -82,11 +151,11 @@ export function CasTable() {
 }
 
 export function MantineCasTable () {
-    const { completedCasArray, filterQuery } = stateStore();
+    const { completedCasArray, filterQuery, difficultyFilterArray, completedCheckbox, notCompletedCheckbox } = stateStore();
 
     let casList = casListJson.map((x: any) => {
         return {
-            id: x[0],
+            id: Number(x[0]),
             boss: x[1],
             name: x[2],
             description: x[3],
@@ -95,16 +164,31 @@ export function MantineCasTable () {
         }
     });
 
-    // Filter casList based on filterQuery before mapping to rows
-    const filteredCasList = casList.filter((element) => {
-        // return element.name.toLowerCase().includes(filterQuery.toLowerCase()) ||
-        //        element.boss.toLowerCase().includes(filterQuery.toLowerCase());
+  // Filter casList based on filterQuery before mapping to rows
+  const filteredCasList = casList.filter((element) => {
+    let achievementCompleted = completedCasArray.includes(element.id);
+    let showRowBasedOnFilters = 0;
+    if ((completedCheckbox && achievementCompleted) || (notCompletedCheckbox && !achievementCompleted)) {
+      showRowBasedOnFilters = 1;
+    }
 
-        const elementValues = Object.values(element);
-        return elementValues.some(value =>
-            value.toString().toLowerCase().includes(filterQuery.toLowerCase())
+    if (showRowBasedOnFilters) {
+      if (difficultyFilterArray.length === 0) {
+        return Object.values(element).some(value =>
+          value.toString().toLowerCase().includes(filterQuery.toLowerCase())
         );
-
+      } else {
+        for (const diff of difficultyFilterArray) {
+          if (element.difficulty.includes(diff)) {
+            return Object.values(element).some(value =>
+              value.toString().toLowerCase().includes(filterQuery.toLowerCase())
+              );
+            }
+          }
+          return false; // Return false if difficulty does not match any element in difficultyFilterArray
+        }
+      }
+      return false; // Default return value if no condition is met
     });
 
     //Rows
@@ -136,13 +220,29 @@ export function MantineCasTable () {
       );
 }
 
-export function CasFilters() {
-    //Show completed
-    //Show not-completed
-    //Dropdown menu to show by difficulty
-    //Search filter to filter by keyword
-}
-
-export function CasSearchBar() {
-    //Search bar to filter to filter by keyword
+export function CheckboxFilters() {
+  const { changeCompletedCheckbox, changeNotCompletedCheckbox } = stateStore();
+  //Show not-completed
+  //Show completed
+  return (
+    <div>
+      Show:
+      <Checkbox
+        defaultChecked
+        color="lime.4"
+        iconColor="dark.8"
+        size="md"
+        label="Completed"
+        onChange={(e) => changeCompletedCheckbox(e.target.checked)}
+      />
+      <Checkbox
+        defaultChecked
+        color="lime.4"
+        iconColor="dark.8"
+        size="md"
+        label="Not-Completed"
+        onChange={(e) => changeNotCompletedCheckbox(e.target.checked)}
+      />
+    </div>
+  );
 }

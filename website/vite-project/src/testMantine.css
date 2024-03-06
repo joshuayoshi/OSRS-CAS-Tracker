@@ -8,6 +8,30 @@
     border-radius: var(--mantine-radius-md);
 }
 
+.mantine-MultiSelect-inputField {
+
+}
+
+/* 
+.mantine-MultiSelect-option[value="Easy"] {
+  background-color:	#00ff0070 ;
+}
+.mantine-MultiSelect-option[value="Medium"] {
+  background-color: #80ff0070 ;
+}
+.mantine-MultiSelect-option[value="Hard"] {
+  background-color: #ffff0070;
+}
+.mantine-MultiSelect-option[value="Elite"] {
+  background-color: #ff700070 ;
+}
+.mantine-MultiSelect-option[value="Master"] {
+  background-color: #ff000070 ;
+}
+.mantine-MultiSelect-option[value="Grandmaster"] {
+  background-color: #ad00ad70 ;
+} */
+
 /* Target table rows within 'mantine-Table' that have the class 'completed' */
 tr.completed {
   /* Apply background color to completed rows */
